@@ -40,7 +40,6 @@ module.exports = {
       'styles': resolve('src/assets/styles')
 =======
       'styles': resolve('src/assets/styles'),
-      'images': resolve('src/assets/images'),
 >>>>>>> origin/index-swiper
     }
   },
