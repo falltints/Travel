@@ -13,32 +13,32 @@ export default {
 <style lang="stylus" type="text/stylus" scoped>
 @import "~styles/variable.styl"
 .header
-  line-height: .86rem /*html设置了font-size: 50px (1rem = 50px, 所以1px = 0.02rem)*/
-  display: flex
-  background: $bgColor
-  color: #ffffff
+  line-height .86rem /*html设置了font-size: 50px (1rem = 50px, 所以1px = 0.02rem)*/
+  display flex
+  background $bgColor
+  color #ffffff
   .header-left
-    width: .64rem
-    float: left
+    width .64rem
+    float left
     .back-icon
-      display: block
-      text-align: center
-      font-size: .4rem
+      display block
+      text-align center
+      font-size .4rem
   .header-right
-    width: 1.24rem
-    float: right
-    text-align: center
+    width 1.24rem
+    float right
+    text-align center
     .arrow-icon
-      font-size: .24rem
-      padding-left: .05rem
+      font-size .24rem
+      padding-left .05rem
   .header-input
-    flex: 1
-    background: #ffffff
-    border-radius: .1rem
-    height: .64rem
-    margin-left: .2rem
-    margin-top: .12rem
-    padding-left: .2rem
-    color: #cccccc
-    line-height: .64rem
+    flex 1
+    background #ffffff
+    border-radius .1rem
+    height .64rem
+    margin-left .2rem
+    margin-top .12rem
+    padding-left .2rem
+    color #cccccc
+    line-height .64rem
 </style>

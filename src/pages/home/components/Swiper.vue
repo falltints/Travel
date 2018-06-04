@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
     <swiper :options="swiperOption">
-      <!-- slides -->
       <swiper-slide v-for="item of swiperList" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl">
       </swiper-slide>
@@ -33,13 +32,13 @@ export default {
 </script>
 <style lang="stylus" type="text/stylus" scoped>
   .wrapper >>> .swiper-pagination-bullet-active
-    background: #ffffff
+    background #ffffff
   .wrapper
-    overflow: hidden
-    width: 100%
-    height: 0
-    padding-bottom: 31.25%
-    background: #eeeeee
+    overflow hidden
+    width 100%
+    height 0
+    padding-bottom 31.25%
+    background #eeeeee
     .swiper-img
-      width: 100%
+      width 100%
 </style>

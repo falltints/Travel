@@ -78,32 +78,34 @@ export default {
   width: 100%
   height: 0
   padding-bottom: 50% /*指的是父级元素宽度的50%*/
-.icon
-  position: relative
-  width: 25%
-  float: left
-  padding-bottom: 25%
-  .icon-img
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: .44rem
-    overflow: hidden
-    box-sizing: border-box /*此时盒子模型的宽度等于 width + border + padding*/
-    padding: .1rem
-    .icon-img-content
-      display: block
-      height: 100%
-      margin: 0 auto
-  .icon-desc
-    position: absolute
-    left: 0
-    right: 0
-    bottom: 0
-    line-height: .44rem
-    height: .44rem
-    color: $darkTextColor
-    text-align: center
-    ellipsis()
+.icons
+  margin-top .1rem
+  .icon
+    position relative
+    width 25%
+    float left
+    padding-bottom 25%
+    .icon-img
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom .44rem
+      overflow hidden
+      box-sizing border-box /*此时盒子模型的宽度等于 width + border + padding*/
+      padding .1rem
+      .icon-img-content
+        display block
+        height 100%
+        margin 0 auto
+    .icon-desc
+      position absolute
+      left 0
+      right 0
+      bottom 0
+      line-height .44rem
+      height .44rem
+      color $darkTextColor
+      text-align center
+      ellipsis()
 </style>
