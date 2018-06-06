@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
@@ -16,30 +16,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgUrl: './static/images/recommend-1.jpg',
-        title: '青城山',
-        desc: '青城山下白素贞，洞中千年修此身'
-      }, {
-        id: '002',
-        imgUrl: './static/images/recommend-2.jpg',
-        title: '乐山大佛',
-        desc: '摩崖石刻雕像'
-      }, {
-        id: '003',
-        imgUrl: './static/images/recommend-3.jpg',
-        title: '九寨沟',
-        desc: '传说中的童话天堂，你还在犹豫吗'
-      }, {
-        id: '004',
-        imgUrl: './static/images/recommend-4.jpg',
-        title: '峨眉山',
-        desc: '云上金顶，天下峨眉'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
