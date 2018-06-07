@@ -14,6 +14,7 @@ import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 import axios from 'axios'
+import { mapState } from 'vuex'
 export default {
   name: 'Home',
   components: {
@@ -25,18 +26,19 @@ export default {
   },
   data () {
     return {
+      lastCity: '',
       swiperList: [],
       iconList: [],
       recommendList: [],
       weekendList: []
     }
   },
-  mounted () {
-    this.getHomeInfo()
+  computed: {
+    ...mapState(['city'])
   },
   methods: {
     getHomeInfo () {
-      axios.get('/static/mock/index.json') // 返回promise对象
+      axios.get('/static/mock/index.json?city=' + this.city) // 返回promise对象
         .then(this.getHomeInfoSucc) // 成功后执行的函数
     },
     getHomeInfoSucc (res) {
@@ -48,6 +50,16 @@ export default {
         this.recommendList = data.recommendList
         this.weekendList = data.weekendList
       }
+    }
+  },
+  mounted () { // 每次切换页面都会触发(如果引用keep-alive则只有首次进入页面时会被触发)
+    this.lastCity = this.city
+    this.getHomeInfo()
+  },
+  activated () { // 即使应用了keep-alive，每次切换路由时也会被触发
+    if (this.lastCity !== this.city) {
+      this.getHomeInfo()
+      this.lastCity = this.city
     }
   }
 }
