@@ -18,7 +18,6 @@ export default {
     DetailBanner,
     DetailHeader,
     DetailList,
-    DetailHeader
   },
   data () {
     return {
