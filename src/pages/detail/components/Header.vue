@@ -44,38 +44,37 @@ export default {
 }
 </script>
 <style type="text/stylus" lang="stylus" scoped>
-@import "~styles/variable.styl"
+@import '~styles/variable.styl'
 .header-abs
-  position absolute
-  left .2rem
-  top .2rem
-  width .8rem
-  height .8rem
-  border-radius .4rem
-  background rgba(0, 0, 0, .8)
-  text-align center
-  line-height .8rem
+  position: absolute
+  left: .2rem
+  top: .2rem
+  width: .8rem
+  height: .8rem
+  line-height: .8rem
+  border-radius: .4rem
+  text-align: center
+  background: rgba(0, 0, 0, .8)
   .header-abs-back
-    color #ffffff
-    font-size .4rem
+    color: #fff
+    font-size: .4rem
 .header-fixed
-  z-index 2
-  position fixed
-  top 0
-  left 0
-  right 0
-  height $headerHeight
-  line-height $headerHeight
-  text-align center
-  color #ffffff
-  background $bgColor
-  font-size .32rem
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  height: $headerHeight
+  line-height: $headerHeight
+  text-align: center
+  color: #fff
+  background: $bgColor
+  font-size: .32rem
   .header-fixed-back
-    width .64rem
-    text-align center
-    font-size .4rem
-    position absolute
-    top 0
-    left 0
-    color #ffffff
+    position: absolute
+    top: 0
+    left: 0
+    width: .64rem
+    text-align: center
+    font-size: .4rem
+    color: #fff
 </style>
