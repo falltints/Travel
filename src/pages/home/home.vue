@@ -1,19 +1,20 @@
 <template>
-<div>
-  <home-header></home-header>
-  <home-swiper :list="swiperList"></home-swiper>
-  <home-icons :list="iconList"></home-icons>
-  <home-recommend :list="recommendList"></home-recommend>
-  <home-weekend :list="weekendList"></home-weekend>
-</div>
+  <div>
+    <home-header></home-header>
+    <home-swiper :list="swiperList"></home-swiper>
+    <home-icons :list="iconList"></home-icons>
+    <home-recommend :list="recommendList"></home-recommend>
+    <home-weekend :list="weekendList"></home-weekend>
+  </div>
 </template>
+
 <script>
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
-import axios from 'axios'
+import axios from 'axios' // 发送ajax请求
 import { mapState } from 'vuex'
 export default {
   name: 'Home',
@@ -34,11 +35,11 @@ export default {
     }
   },
   computed: {
-    ...mapState(['city'])
+    ...mapState(['city']) // 引用vuex-state中的数据（因为此数据会被多次修改，所以放在state中）
   },
   methods: {
     getHomeInfo () {
-      axios.get('/static/mock/index.json?city=' + this.city) // 返回promise对象
+      axios.get('/api/index.json?city=' + this.city) // 返回promise对象
         .then(this.getHomeInfoSucc) // 成功后执行的函数
     },
     getHomeInfoSucc (res) {
@@ -64,6 +65,7 @@ export default {
   }
 }
 </script>
+
 <style>
 
 </style>

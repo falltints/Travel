@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import fastClick from 'fastclick'
+import fastClick from 'fastclick' // 解决鼠标点击300ms延迟
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import store from './store/index'
 import 'babel-polyfill' // 兼容部分浏览器的proxy不支持问题

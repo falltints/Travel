@@ -54,11 +54,11 @@ export default {
       line-height .4rem
       color #ccc
       ellipse()
-  .item-button
-    margin-top .16rem
-    color #fff
-    background #ff9300
-    padding 0 .2rem
-    border-radius .06rem
-    line-height .44rem
+    .item-button // button是inline-block元素 注：块级元素和inline-block元素或者内联元素不能在一行显示
+      margin-top .16rem
+      color #fff
+      background #ff9300
+      padding 0 .2rem
+      border-radius .06rem
+      line-height .44rem
 </style>

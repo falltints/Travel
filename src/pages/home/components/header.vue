@@ -19,12 +19,13 @@ export default {
 <style lang="stylus" type="text/stylus" scoped>
 @import "~styles/variable.styl"
 .header
-  line-height $headerHeight /*html设置了font-size: 50px (1rem = 50px, 所以1px = 0.02rem)*/
+  line-height $headerHeight
+  /*使子级块级元素中的文本，内联元素垂直居中，且子级中没有设置高的块级元素，其高度等于此line-height*/
   display flex
   background $bgColor
   color #ffffff
   .header-left
-    width .64rem
+    width .64rem /*html设置了font-size: 50px (1rem = 50px, 所以1px = 0.02rem)*/
     float left
     .back-icon
       display block
@@ -38,15 +39,13 @@ export default {
     color #ffffff
     .arrow-icon
       font-size .24rem
-      padding-left .05rem
+      padding-left .08rem
   .header-input
     flex 1
     background #ffffff
     border-radius .1rem
-    height .64rem
-    margin-left .2rem
-    margin-top .12rem
+    margin .1rem 0 .1rem .2rem
     padding-left .2rem
     color #cccccc
-    line-height .64rem
+    line-height .66rem
 </style>

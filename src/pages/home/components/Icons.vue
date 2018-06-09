@@ -1,8 +1,8 @@
 <template>
   <div class="icons">
     <swiper :options="swiperOption">
-      <swiper-slide v-for="(page, index) in pages" :key="index">
-        <div class="icon" v-for="item in page" :key="item.id">
+      <swiper-slide v-for="(page, index) of pages" :key="index">
+        <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
             <img class="icon-img-content" :src="item.imgUrl">
           </div>
@@ -35,7 +35,7 @@ export default {
         }
         pages[page].push(item)
       })
-      return pages
+      return pages // 二维数组
     }
   }
 }
@@ -43,7 +43,7 @@ export default {
 <style lang="stylus" type="text/stylus" scoped>
 @import "~styles/variable.styl"
 @import "~styles/mixin.styl"
-.icons >>> .swiper-container
+.icons >>> .swiper-container // 因为swiper的大小取决于内部元素的大小，而可滑动区域仅为swiper，不包含其父级元素
   width: 100%
   height: 0
   padding-bottom: 50% /*指的是父级元素宽度的50%*/
@@ -51,8 +51,8 @@ export default {
   margin-top .1rem
   .icon
     position relative
-    width 25%
     float left
+    width 25%
     padding-bottom 25%
     .icon-img
       position absolute
@@ -60,8 +60,7 @@ export default {
       left 0
       right 0
       bottom .44rem
-      overflow hidden
-      box-sizing border-box /*此时盒子模型的宽度等于 width + border + padding*/
+      /* ? box-sizing border-box*/ /*此时盒子模型的宽度等于 width + border + padding*/
       padding .1rem
       .icon-img-content
         display block

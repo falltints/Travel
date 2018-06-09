@@ -20,7 +20,7 @@ export default new Router({
     name: 'Detail',
     component: Detail
   }],
-  scrollBehavior (to, from, savedPosition) {
-    return {x: 0, y: 0}
+  scrollBehavior (to, from, savedPosition) { // 切换路由页面滚动位置
+    return {x: 0, y: 0} // 回到顶部
   }
 })
