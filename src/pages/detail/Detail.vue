@@ -17,7 +17,7 @@ export default {
   components: {
     DetailBanner,
     DetailHeader,
-    DetailList,
+    DetailList
   },
   data () {
     return {
