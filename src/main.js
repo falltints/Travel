@@ -6,6 +6,7 @@ import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import store from './store/index'
+import 'babel-polyfill' // 兼容部分浏览器的proxy不支持问题
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
