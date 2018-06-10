@@ -6,6 +6,7 @@
     <city-alphabet :cities="cities" @change="handleLetterChange"></city-alphabet>
   </div>
 </template>
+
 <script>
 import CityHeader from './components/Header'
 import CitySearch from './components/Search'
@@ -27,9 +28,6 @@ export default {
       letter: ''
     }
   },
-  mounted () {
-    this.getCityInfo()
-  },
   methods: {
     getCityInfo () {
       axios.get('/api/city.json')
@@ -46,9 +44,13 @@ export default {
     handleLetterChange (letter) {
       this.letter = letter
     }
+  },
+  mounted () {
+    this.getCityInfo()
   }
 }
 </script>
-<style lang="stylus" type="text/stylus" scoped>
+
+<style>
 
 </style>

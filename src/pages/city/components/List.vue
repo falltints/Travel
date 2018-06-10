@@ -1,11 +1,11 @@
 <template>
   <div class="list" ref="wrapper">
-    <div>
+    <div><!--因为better-scroll只处理第一个子元素的滚动，所以要对以下三个area进行包裹-->
       <div class="area">
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">{{ this.currentCity }}</div>
+            <div class="button">{{ currentCity }}</div>
           </div>
         </div>
       </div>
@@ -88,9 +88,10 @@ export default {
     padding-left .2rem
     font-size .26rem
     color #666
+    clear both /*同样可以清除浮动*/
   .button-list
     padding .1rem
-    overflow hidden /*可以用来清除浮动*/
+    /*overflow hidden*/ /*可以用来清除浮动*/
     .button-wrapper
       float left
       width 33.33%

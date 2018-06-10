@@ -50,7 +50,7 @@ export default {
         clearTimeout(this.timer)
       }
       this.timer = setTimeout(() => {
-        const result = []
+        const result = [] // 存储所有匹配项
         for (let i in this.cities) {
           this.cities[i].forEach((value) => {
             if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
@@ -63,7 +63,7 @@ export default {
     }
   },
   mounted () {
-    this.scroll = new BScroll(this.$refs.search)
+    this.scroll = new BScroll(this.$refs.search) // 通过ref获取dom元素
   }
 }
 </script>
@@ -73,7 +73,7 @@ export default {
   height .72rem
   background $bgColor
   padding 0 .1rem
-  .search-input
+  .search-input // inline-block元素
     box-sizing border-box
     height .6rem
     line-height .6rem

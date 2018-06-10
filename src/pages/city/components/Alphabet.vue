@@ -48,6 +48,7 @@ export default {
           clearTimeout(this.timer)
         }
         this.timer = setTimeout(() => {
+          console.log(e.touches[0])
           const touchY = e.touches[0].clientY - 79 // 当前触摸点相对于当前可视区域（窗口）的偏移量
           const index = Math.floor((touchY - this.startY) / 20) // 每个字母项的高度为20px
           if (index >= 0 && index < this.letters.length) {
@@ -60,7 +61,7 @@ export default {
       this.touchStatus = false
     }
   },
-  updated () {
+  updated () { // 由于数据更改导致的虚拟 DOM 重新渲染和打补丁,在这之后会调用该钩子
     this.startY = this.$refs['A'][0].offsetTop // offsetTop是当前元素距离已定位父元素的偏移量
   }
 }
