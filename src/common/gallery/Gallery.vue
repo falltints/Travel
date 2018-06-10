@@ -40,7 +40,7 @@ export default {
 </script>
 <style type="text/stylus" lang="stylus" scoped>
 .container >>> .swiper-container
-  overflow inherit
+  overflow inherit // 默认是overflow: hidden (这样pagination会看不到)
 .container
   display flex
   flex-direction column
@@ -60,5 +60,5 @@ export default {
       width 100%
     .swiper-pagination
       color #ffffff
-      bottom -1rem
+      bottom -1rem // swiper-pagination是绝对定位
 </style>

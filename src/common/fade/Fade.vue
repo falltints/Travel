@@ -13,4 +13,5 @@ export default {
   opacity 0
 .v-enter-active, .v-leave-active
   transition opacity .5s
+// 默认v-enter-to和v-leave的opacity为1
 </style>
