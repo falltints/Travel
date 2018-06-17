@@ -7,6 +7,7 @@ import Detail from '@/pages/detail/Detail'
 Vue.use(Router)
 
 export default new Router({
+  // mode: 可选值: "hash"(默认) | "history" | "abstract"
   routes: [{
     path: '/',
     name: 'Home',
